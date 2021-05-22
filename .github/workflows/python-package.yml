@@ -29,9 +29,9 @@ jobs:
     - name: Check docker installed or not
       run: docker run hello-world
     - name: Push to docker Hub
-      uses: docker/build-push-action@v2.4.0
+      uses: docker/build-push-action@v1
       with:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
-        repository: docker push psrv3/devopswithpy
+        repository: psrv3/devopswithpy
         tag_with_ref: true
